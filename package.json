@@ -1,0 +1,22 @@
+{
+  "name": "acbeu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server",
+    "sass": "./node_modules/node-sass/bin/node-sass --output-style compressed assets/sass/light-bootstrap-dashboard.scss assets/css/dash.min.css",
+    "sass:watch": "./node_modules/node-sass/bin/node-sass --output-style compressed -w assets/sass/light-bootstrap-dashboard.scss assets/css/dash.min.css",
+    "server": "./node_modules/.bin/http-server ./ -o -p 8000 -g",
+    "dev": "./node_modules/.bin/npm-run-parallel sass:watch server",
+    "prim": "npm i && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.2",
+    "npm-run-parallel": "^0.6.0"
+  }
+}
